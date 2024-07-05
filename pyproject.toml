@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pynsted"
-version = "1.0.7"
+version = "1.0.8"
 description = "Add a method to dictionaries to get nested values"
 authors = ["The Pragmatic Solutions <contact@thepragmatic.fi>"]
 readme = "README.md"
@@ -10,10 +10,8 @@ classifiers = [
   "License :: OSI Approved :: BSD License",
   "Intended Audience :: Developers",
 ]
-
-[project.urls]
-Repository = "https://github.com/pragmatic-fi/pynsted.git"
-Homepage = "https://github.com/pragmatic-fi/pynsted"
+repository = "https://github.com/pragmatic-fi/pynsted.git"
+homepage = "https://github.com/pragmatic-fi/pynsted"
 
 [tool.poetry.dependencies]
 python = ">=3.11,<3.13"
