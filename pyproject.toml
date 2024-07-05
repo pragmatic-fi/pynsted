@@ -1,9 +1,9 @@
 [tool.poetry]
 name = "pynsted"
-version = "1.0.1"
+version = "1.0.2"
 description = "Add a method to dictionaries to get nested values"
 authors = ["The Pragmatic Solutions <contact@thepragmatic.fi>"]
-license = "License::OSI Approved::BSD License"
+license = "2-clause BSD"
 readme = "README.md"
 keywords = ["dictionary", "nested"]
 classifiers = [
