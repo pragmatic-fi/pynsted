@@ -28,6 +28,24 @@ def test_no_value(input_dict: dict[Any, Any], path: list[Any]) -> None:
 
 
 @pytest.mark.parametrize(
+    "input_dict,path,expected",
+    (
+        # depth 1
+        [{1: 2}, [1], 2],
+        [{1: "foo", 2: {3: "bar"}, 4: "baz"}, [1], "foo"],
+        # deeper
+        [{1: {2: {3: "gnusto", 4: "xyzzy"}}}, [1, 2, 3], "gnusto"],
+    ),
+)
+def test_get(
+    input_dict: dict[Any, Any], path: list[Any], expected: Any
+) -> None:
+    """Test getting of existing value."""
+    p: PynstedPrism[dict[Any, Any], Any] = PynstedPrism(input_dict, path)
+    assert p.get() == expected
+
+
+@pytest.mark.parametrize(
     "input_dict,path",
     (
         [{}, [1]],
