@@ -59,6 +59,11 @@ def test_use_default_value(
             [1, 2],
             {1: {1: "gnusto", 2: "foo"}, 2: "xyzzy"},
         ],
+        [
+            {1: {1: "gnusto"}, 2: "xyzzy"},
+            [1, 2, 3],
+            {1: {1: "gnusto", 2: {3: "foo"}}, 2: "xyzzy"},
+        ],
     ),
 )
 def test_set_absent(
